@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <h1 v-if="error.statusCode === 404">
       {{ pageNotFound }}
     </h1>
@@ -33,6 +33,9 @@ export default {
       pageNotFound: '404 Not Found',
       otherError: 'An error occurred'
     }
+  },
+  mounted () {
+    console.log('page erreur montée')
   }
 }
 </script>
